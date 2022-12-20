@@ -1,0 +1,35 @@
+{% extends "master.html" %}
+
+{% block titulo %} Contacto {% endblock %}
+
+{% block titulo_seccion %} CONTACTANOS {% endblock %}
+
+{% block cuerpo %}
+    <section class="contenedor_formulario">
+        <h2>Formulario de Contactos</h2>
+        <form method="POST" class="formulario_r" style="margin-top: 30px;">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="">Nombre</label>
+                <input type="text" class="form-control" id="nombre"  placeholder="Ingrese su nombre completo" name="{{form.nombre.name}}">
+            </div>
+            <div class="form-group">
+                <label for="">Rut</label>
+                <input type="number" class="form-control" id="rut"  placeholder="Ingrese su rut solo sin guion y sin puntos, si termina en k ingrese un 0" name="{{form.rut.name}}">
+            </div>
+            <div class="form-group">
+                <label for="">E-mail</label>
+                <input type="text" class="form-control" id="email"  placeholder="Ingrese su e-mail" name="{{form.email.name}}">
+            </div>
+            <div class="form-group">
+                <label for="">Telefono</label>
+                <input type="number" class="form-control" id="telefono"  placeholder="Ingrese su telefono" name="{{form.telefono.name}}">
+            </div>
+            <div class="form-group">
+                <label for="">Patente</label>
+                <input type="text" class="form-control" id="patente" placeholder="Ingrese los 6 digitos de su patente, si los ingresa mal no se le permitira el ingreso" name="{{form.patente.name}}">
+            </div>
+            <input type="submit" id="b_registrarse" value="REGISTRARSE">
+        </form>
+    </section>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "master.html" %}
+
+{% block titulo %} Registro {% endblock %}
+
+{% block titulo_seccion %} REGISTROS {% endblock %}
+
+{% block cuerpo %}
+    <section class="contenedor_formulario">
+        <h2>Formulario de Registro</h2>
+        <form method="POST" class="formulario_r" style="margin-top: 30px;">
+            {% csrf_token %}
+            {{ form.as_div }}
+            <input type="submit" id="b_registrarse" value="REGISTRARSE">
+        </form>
+    </section>
+{% endblock %}

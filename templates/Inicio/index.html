@@ -1,0 +1,40 @@
+{% extends "master.html" %}
+
+{% block titulo %} Inicio {% endblock %}
+
+{% block titulo_seccion %} Estacionamientos {% endblock %}
+
+{% block cuerpo %}
+    <section class="index">
+        <div class="cuerpo">
+            <div class="inicio">
+                <div class="Titulo-inicio">
+                    <h2>¡BIENVENIDOS AL PORTAL DE SOLICITUDES DE ESTACIONAMIENTO INACAP SUR!</h2>
+                    <h3>Instrucciones</h3>
+                </div>
+                <div class="Lista-inicio">
+                    <ul>
+                        <li>Solicitudes: <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore dolore veritatis qui optio vel earum pariatur eius neque eos fugiat quidem nemo minima architecto assumenda accusantium, exercitationem iste quisquam culpa?</p></li>
+                        <li>Resultados: <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore dolore veritatis qui optio vel earum pariatur eius neque eos fugiat quidem nemo minima architecto assumenda accusantium, exercitationem iste quisquam culpa?</p></li>
+                        <li>Registros: <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore dolore veritatis qui optio vel earum pariatur eius neque eos fugiat quidem nemo minima architecto assumenda accusantium, exercitationem iste quisquam culpa?</p></li>
+                        <li>Titulo Instrucciones: <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore dolore veritatis qui optio vel earum pariatur eius neque eos fugiat quidem nemo minima architecto assumenda accusantium, exercitationem iste quisquam culpa?</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="botones-inicio">
+                <button><a href="{% url 'solicitudes'%}">Solicitar Cupo</a></button>
+                <button><a href="{% url 'resultados' %}">Ver Resultado</a></button>
+                <button><a href="{% url 'registro'%}">Registrarse</a></button>
+            </div>
+        </div>
+        <div class="contador">
+            <div class="cont_contador">
+                <h1>Disponibilidad de Cupos:</h2>
+                <h3>AUTOS</h3>
+                <h2>233/300</h2>
+                <h3>MOTOS</h3>
+                <h2>15/80</h2>
+            </div>
+        </div>
+    </section>
+{% endblock %}

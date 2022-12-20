@@ -1,0 +1,314 @@
+/*Reset Global*/
+*{
+    margin: 0;
+    padding: 0;
+}
+/*Css estructura general*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+.nav{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    top: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    margin: 10px 20px 0 50px;
+}
+.logo img{
+    width: 150px;
+}
+.enlaces{
+    margin: 0 100px 0 50px;
+    display: inline-flex;
+    align-items: center;
+}
+.enlaces a{
+    text-decoration: none;
+    color: black;
+    transition: 500ms;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0 15px 0 15px;
+}
+.enlaces a:hover{
+    color: rgb(198, 189, 189);
+    transition:300ms
+}
+.enlaces a img{
+    width: 23px;
+    margin-top: 6px;
+}
+.portada{
+    width: 100%;
+    height: 300px;
+    background: url(/static/images/Estacionamiento.jpg) no-repeat center / cover ;
+}
+.port-1{
+    width: 100%;
+    height: 300px;
+    background-color:rgb(14, 14, 14, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.port-1 h1{
+    color: white;
+    font-size: 70px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+.port-1 h2{
+    color: rgb(237, 237, 237, 0.7);
+    font-size: 25px;
+    font-weight:lighter;
+}
+footer{
+    width: 100%;
+    height: auto;
+    background: rgb(140, 9, 9);
+    color: white;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+footer .menu-footer{
+    width: 300px;
+    text-align: justify;
+    padding: 50px;
+}
+footer .menu-footer h3{
+    font-size: 25px;
+    font-weight: lighter;
+}
+footer .menu-footer p{
+    margin-top: 30px;
+}
+footer .logo-inf img{
+    width: 80px;
+    padding: 40px 70px;
+}
+/*Estructura Inicio*/
+.cuerpo{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.index{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.inicio{
+    width: 80%;
+    height: auto;
+}
+.Titulo-inicio{
+    width: 100%;
+    height: auto;
+    margin: 20px 0 20px 0;
+    text-align: center;
+}
+.Titulo-inicio h2{
+    font-size: 34px;
+    margin: 50px 0 20px 0;
+    font-weight: lighter;
+}
+.Titulo-inicio h3{
+    font-weight: bold;
+    font-size: 24px;
+}
+.Lista-inicio ul li{
+    margin: 20px 0 20px 0;
+    font-size: 25px;
+    font-weight: 400;
+}
+.Lista-inicio ul li p{
+    margin: 15px 0 15px 0;
+    font-size: 21px;
+}
+.botones-inicio{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.botones-inicio button{
+    margin: 50px 20px 50px 20px;
+    padding: 5px 15px;
+    font-size: 24px;
+    transition: 500ms;
+    text-transform: uppercase;
+    border-radius: 8px;
+    background-color: brown;
+    border-color: rgb(194, 70, 70);
+}
+.botones-inicio button:hover{
+    transition: 300ms;
+    background-color: rgb(107, 15, 15);
+}
+.botones-inicio button a{
+    text-decoration: none;
+    color: white;
+}
+.contador{
+    width: 30%;
+    padding: 50px 50px 50px 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+}
+.cont_contador{
+    width: 100%;
+    height: auto;
+    font-size: 30px;
+    padding: 20px;
+    border: 3px solid rgb(173, 26, 26);
+    border-radius: 10px;
+}
+.cont_contador h1{
+    color: rgb(199, 5, 5);
+    font-weight: lighter;
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+.cont_contador h2{
+    color: rgb(199, 5, 5);
+    font-weight: lighter;
+    font-size: 40px;
+}
+/*Esctructura Contactos */
+.portada4{
+    width: 100%;
+    height: 300px;
+    background: url(/static/images/businesswoman-looking-important-contact-on-phone.jpg) no-repeat center / cover ;
+}
+.port-4{
+    width: 100%;
+    height: 300px;
+    background-color:rgb(14, 14, 14, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.port-4 h1{
+    color: white;
+    font-size: 70px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+.port-4 h2{
+    color: rgb(237, 237, 237, 0.7);
+    font-size: 25px;
+    font-weight:lighter;
+}
+/*Esctructura Registro*/
+.portada2{
+    width: 100%;
+    height: 300px;
+    background: url(/static/images/hands-of-unrecognizable-female-doctor-using-laptop-in-office.jpg) no-repeat center / cover ;
+}
+.port-2{
+    width: 100%;
+    height: 300px;
+    background-color:rgb(14, 14, 14, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.port-2 h1{
+    color: white;
+    font-size: 70px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+.port-2 h2{
+    color: rgb(237, 237, 237, 0.7);
+    font-size: 25px;
+    font-weight:lighter;
+}
+#b_registrarse{
+    margin-top: 25px;
+    padding: 5px 15px 5px 15px;
+    color: white;
+    background-color: brown;
+}
+.contenedor_formulario{
+    width: 100%;
+    padding: 120px;
+    height: auto;
+}
+.formulario_r{
+    margin-top: 30px;
+}
+.formulario_r div{
+    margin: 15px 0 15px 0;
+}
+/*Esctructura Solicitudes*/
+.portada3{
+    width: 100%;
+    height: 300px;
+    background: url(/static/images/solicitud.jpg) no-repeat center / cover ;
+}
+.port-3{
+    width: 100%;
+    height: 300px;
+    background-color:rgb(14, 14, 14, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.port-3 h1{
+    color: white;
+    font-size: 70px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+.port-3 h2{
+    color: rgb(237, 237, 237, 0.7);
+    font-size: 25px;
+    font-weight:lighter;
+}
+/*Estructura de Resultados*/
+.portada5{
+    width: 100%;
+    height: 300px;
+    background: url(/static/images/empty-parking-lot.jpg) no-repeat center / cover ;
+}
+.port-5{
+    width: 100%;
+    height: 300px;
+    background-color:rgb(14, 14, 14, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.port-5 h1{
+    color: white;
+    font-size: 70px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+.port-5 h2{
+    color: rgb(237, 237, 237, 0.7);
+    font-size: 25px;
+    font-weight:lighter;
+}
+.res{
+    padding-top: 40px;
+}

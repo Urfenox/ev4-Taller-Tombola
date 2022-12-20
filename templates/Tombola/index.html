@@ -1,0 +1,42 @@
+{% extends "master.html" %}
+
+{% block titulo %} Panel {% endblock %}
+
+{% block titulo_seccion %} Panel de Control {% endblock %}
+
+{% block cuerpo %}
+    <section class="contenedor_formulario">
+        <h2>Resultados</h2>
+        <div class="res">
+            <ul>
+                <div class="container">
+                    {% if ganadores %}
+                        <table  class="table">
+                            <thead>
+                                <tr>
+                                    <th><h5>RUT</h5></th>
+                                    <th><h5>Faltas</h5></th>
+                                    <th><h5>Ocupado</h5></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in ganadores %}
+                                <tr>
+                                    <td>{{ item.rut }}</td>
+                                    <td>{{ item.faltas }} <em>de 3</em></td>
+                                    <td>{{ item.estacionado }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    {% else %}
+                        <div class="alert alert-danger">No hay ganadores</div>
+                    {% endif %}
+                </div>
+            </ul>
+        </div>
+        <div class="botones-inicio">
+            <button><a href="panel/">Ir al Panel</a></button>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "master.html" %}
+
+{% block titulo %} Panel {% endblock %}
+
+{% block titulo_seccion %} Panel de Control<br>Sorteo {% endblock %}
+
+{% block cuerpo %}
+    <section class="contenedor_formulario">
+        <h2>Control Sorteo</h2>
+        <div class="res">
+            <ul>
+                <div class="botones-inicio">
+                    <button><a href="{% url 'do_sorteo'%}">Realizar Sorteo</a></button>
+                    <button><a href="../">Ver Resultado</a></button>
+                    <button><a href="{% url 'new_sorteo'%}">Nuevo Sorteo</a></button>
+                </div>
+            </ul>
+        </div>
+    </section>
+{% endblock %}
