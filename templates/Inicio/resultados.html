@@ -6,32 +6,55 @@
 
 {% block cuerpo %}
     <section class="contenedor_formulario">
+        {% if ganadores %}
         <h2>Resultados</h2>
         <div class="res">
             <ul>
                 <div class="container">
-                    {% if ganadores %}
-                        <table  class="table">
-                            <thead>
-                                <tr>
-                                    <th><h5>RUT</h5></th>
-                                    <th><h5>Faltas</h5></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {% for item in ganadores %}
-                                <tr>
-                                    <td>{{ item.rut }}</td>
-                                    <td>{{ item.faltas }} <em>de 3</em><td>
-                                </tr>
-                                {% endfor %}
-                            </tbody>
-                        </table>
-                    {% else %}
-                        <div class="alert alert-danger">No hay ganadores</div>
-                    {% endif %}
+                    <table  class="table">
+                        <thead>
+                            <tr>
+                                <th><h5>RUT</h5></th>
+                                <th><h5>Faltas</h5></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for item in ganadores %}
+                            <tr>
+                                <td>{{ item.rut }}</td>
+                                <td>{{ item.faltas }} <em>de 3</em><td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
             </ul>
+            {% endif %}
+            <hr>
+            {% if resultado %}
+                <table  class="table">
+                    <thead>
+                        <tr>
+                            <th><h5>RUT</h5></th>
+                            <th><h5>¿Cupo?</h5></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{ resultado.rut }}</td>
+                            <td>{{ resultado.cupo }}<td>
+                        </tr>
+                    </tbody>
+                </table>
+            {% else %}
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <label for="RUT"><h3>Buscar por RUT</h3></label><br>
+                    <input type="number" name="rut" id="RUT"><br>
+                    <br>
+                    <button class="btn btn-danger" type="submit">Buscar</button>
+                </form>
+            {% endif %}
         </div>
     </section>
 {% endblock %}

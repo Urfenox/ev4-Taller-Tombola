@@ -14,6 +14,57 @@
                     <button><a href="../">Ver Resultado</a></button>
                     <button><a href="{% url 'new_sorteo'%}">Nuevo Sorteo</a></button>
                 </div>
+                <div class="container">
+                    <h2>Registros</h2>
+                    {% if registrados %}
+                        <table  class="table">
+                            <thead>
+                                <tr>
+                                    <th><h5>RUT</h5></th>
+                                    <th><h5>Nombre</h5></th>
+                                    <th><h5>Telefono</h5></th>
+                                    <th><h5>Correo</h5></th>
+                                    <th><h5>Patente</h5></th>
+                                    <th><h5>Licencia N</h5></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in registrados %}
+                                <tr>
+                                    <td>{{ item.rut }}</td>
+                                    <td>{{ item.nombre }}</td>
+                                    <td>{{ item.telefono }}</td>
+                                    <td>{{ item.email }}</td>
+                                    <td>{{ item.patente }}</td>
+                                    <td>{{ item.licencia }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    {% else %}
+                        <div class="alert alert-danger">No hay registrados</div>
+                    {% endif %}
+                    <hr>
+                    <h2>Solicitudes</h2>
+                    {% if solicitudes %}
+                        <table  class="table">
+                            <thead>
+                                <tr>
+                                    <th><h5>RUT</h5></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in solicitudes %}
+                                <tr>
+                                    <td>{{ item.rut }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    {% else %}
+                        <div class="alert alert-danger">No hay solicitudes</div>
+                    {% endif %}
+                </div>
             </ul>
         </div>
     </section>

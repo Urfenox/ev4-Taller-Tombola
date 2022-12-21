@@ -6,6 +6,9 @@
 
 {% block cuerpo %}
     <section class="contenedor_formulario">
+        {% if error %}
+            <div class="alert alert-danger">{{ error.mensaje }}</div>
+        {% endif %}
         <h2>Resultados</h2>
         <div class="res">
             <ul>

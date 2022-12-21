@@ -33,5 +33,18 @@ def contacto(request):
 
 def resultados(request):
     ganadores = Modelo.Ganadores.objects.all()
-    data = {"ganadores": ganadores}
+    if request.method == 'POST':
+        rutBuscado = request.POST['rut']
+        ganadoresActuales = Modelo.Ganadores.objects.all()
+        ganadores = []
+        for item in ganadoresActuales:
+            ganadores.append(item.rut)
+        if int(rutBuscado) in ganadores:
+            cupo = "Si"
+        else:
+            cupo = "No"
+        resultado = {"rut": rutBuscado, "cupo": cupo}
+        data = {"resultado": resultado}
+    else:
+        data = {"ganadores": ganadores}
     return render(request, 'Inicio/resultados.html', data)
