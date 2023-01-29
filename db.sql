@@ -8,3 +8,14 @@ INSERT INTO tombola_registro (id, rut, nombre, email, telefono, patente, licenci
 INSERT INTO tombola_registro (id, rut, nombre, email, telefono, patente, licencia) VALUES (8, '889990000', 'Jose', 'jose@mail.com', '929300313', 'MXBGRM', 928);
 INSERT INTO tombola_registro (id, rut, nombre, email, telefono, patente, licencia) VALUES (9, '990000000', 'Juaquin', 'juaquin@mail.com', '951132322', 'FCZBZ1', 435);
 INSERT INTO tombola_registro (id, rut, nombre, email, telefono, patente, licencia) VALUES (10, '100000000', 'Maximo', 'maximo@mail.com', '972422732', '3MD7TD', 921);
+
+INSERT INTO tombola_solicitudes (id, rut) VALUES (1, '112223334');
+INSERT INTO tombola_solicitudes (id, rut) VALUES (2, '223334445');
+INSERT INTO tombola_solicitudes (id, rut) VALUES (3, '334445556');
+INSERT INTO tombola_solicitudes (id, rut) VALUES (4, '445556667');
+INSERT INTO tombola_solicitudes (id, rut) VALUES (5, '556667778');
+INSERT INTO tombola_solicitudes (id, rut) VALUES (6, '667778889');
+INSERT INTO tombola_solicitudes (id, rut) VALUES (7, '778889990');
+INSERT INTO tombola_solicitudes (id, rut) VALUES (8, '889990000');
+INSERT INTO tombola_solicitudes (id, rut) VALUES (9, '990000000');
+INSERT INTO tombola_solicitudes (id, rut) VALUES (10, '100000000');
